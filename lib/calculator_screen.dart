@@ -232,7 +232,6 @@ class CalculatorScreenState extends State{
                           ),
                           SizedBox(width: 10,),
                           Expanded(
-
                             child: Padding(
                               padding: EdgeInsets.only(left: 18),
                               child: CalculatorButton(
@@ -267,6 +266,7 @@ class CalculatorScreenState extends State{
   }
 
   void onOperatorClicked(String operator) {
+    if(resultText.isEmpty) return ;
     if(savedNumber.isEmpty){
     savedNumber = resultText;
     savedOperator = operator ;
@@ -316,6 +316,7 @@ class CalculatorScreenState extends State{
   });
   }
   void onDotClicked(String _) {
+    if(resultText.contains('.')) return;
     resultText+='.';
     setState(() {
 
