@@ -230,6 +230,7 @@ class CalculatorScreenState extends State{
                               ],
                             ),
                           ),
+
                           SizedBox(width: 10,),
                           Expanded(
                             child: Padding(
